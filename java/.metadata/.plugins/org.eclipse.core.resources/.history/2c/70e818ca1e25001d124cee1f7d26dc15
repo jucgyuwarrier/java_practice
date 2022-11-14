@@ -1,0 +1,65 @@
+package com.myspring.pro30.board.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.stereotype.Repository;
+
+import com.myspring.pro30.board.vo.ArticleVO;
+import com.myspring.pro30.board.vo.ImageVO;
+
+@Repository("boardDAO")
+public class BoardDAOImpl implements BoardDAO {
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Override
+	public List selectAllArticlesList() throws Exception {
+		List<ArticleVO> articlesList = sqlSession.selectList("mapper.board.selectAllArticlesList");
+		return articlesList;
+	}
+	
+	@Override
+	public int insertNewArticle(Map, articleMap) throws Exception {
+		int articleNO = selectNewArticleNO();
+		articleMap.put("articleNO", articleNO);
+		sqlSession.insert("mapper.board.insertNewArticle",articleMap);
+		return articleNO;
+	}
+	
+	//DAO에서는 새 글에 대한 글 번호를 조회하고 전달된 articleMap에 글 번호를 설정함 그리고 insert메서드를 호출하면서
+	// articleMap을 해당 id의 insert문으로 전달합니다.
+	
+	@Override
+	public ArticleVO selectArticle(int articleNO) throws DataAccessException {
+		return sqlSession.selectOne("mapper.board.selectArticle", articleNO);
+	}
+	
+	@Override
+	public void updateArticle(Map articleMap) throws DataAccessException{
+		sqlSession.update("mapper.board.updateArticle", articleMap);
+	}
+	
+	@Override
+	public void deleteArticle(int articleNO) throws DataAccessException {
+		sqlSession.delete("mapper.board.deleteArticle", articleNO);
+	}
+	
+	@Override
+	public List selectImageFileList(int articleNO) throws DataAccessException {
+		List<ImageVO> imageFileList = null;
+		imageFileList = sqlSession.selectList("mapper.board.selectImageFileList", articleNO);
+		return imageFileList;
+	}
+	
+	private int selectNewArticleNO() throws DataAccessException {
+		return sqlSession.selectOne("mapper.board.selectNewArticleNO");
+	}
+	
+	private int selectNewImageFileNO() throws DataAccessException {
+		return sqlSession.selectOne("mapper.board.selectNewImageFileNO");
+	}
+}

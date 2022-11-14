@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+<typeAliases>
+<typeAlias type="com.spring.ex03.MemberVO" alias="memberVO"/> <!-- 자바에 대한 다른 명칭 사용 관련-->
+</typeAliases>
+
+<environments default="development">
+<environment id="development">
+<transactionManager type="JDBC"/> <!-- 디비관련 제어 -->
+<dataSource type = "POOLED">
+<property name="driver" value="org.mariadb.jdbc.Driver"/>
+<property name="url" value="jdbc:mariadb://localhost:3306/servletex"/>
+<property name="username" value="root"/>
+<property name="password" value="1234"/>
+</dataSource>
+</environment>
+</environments>
+
+<mappers>
+<mapper resource="mybatis/mappers/member.xml"/>
+<!-- resourcce면 클래스패스의 상대경로 리소스 사용
+	 url면 클래스패스의 상대경로 url사용 			
+	 class면 매퍼 인터페이스 사용
+	 name면 패키지 내 모든 인터페이스를 등록 -->
+</mappers>
+</configuration>

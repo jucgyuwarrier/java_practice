@@ -1,0 +1,31 @@
+1659926350308	Copy file
+1659926479745	Copy compilation unit
+1659926487125	Rename type 'MemberVO'
+1659929749174	Rename compilation unit 'MemberVO3.java'
+1659929918229	Delete element
+1659930254982	Rename type 'MemberController'
+1659941608177	Delete element
+1660007420872	Delete element
+1660007423862	Delete element
+1660007425978	Delete element
+1660007428044	Delete element
+1660007431033	Delete element
+1660023915204	Rename type 'BoardController'
+1660023941544	Delete element
+1660023944016	Rename type 'BoardDAO'
+1660023946389	Rename type 'BoardService'
+1660024027596	Rename resource 'listArticles.jsp'
+1660031925333	Infer generic type arguments
+1660092083254	Rename type 'BoardController2'
+1660092087148	Rename compilation unit 'BoardDAO2.java'
+1660092090353	Rename compilation unit 'BoardService2.java'
+1660092097058	Rename type 'ArticleVO2'
+1660092354040	Rename resource 'listArticles2.jsp'
+1660095023861	Rename type 'BoardController'
+1660095055546	Rename type 'BoardController'
+1660095690479	Delete element
+1660198439561	Delete element
+1660198443555	Delete element
+1660198450056	Delete element
+1660198453578	Delete element
+1660198457188	Delete element

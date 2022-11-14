@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pro16jquery&apos; to &apos;pro16&apos;" description="Rename resource &apos;pro16jquery&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/pro16jquery" name="pro16" stamp="1658981464273" updateReferences="true"/>
+</session>

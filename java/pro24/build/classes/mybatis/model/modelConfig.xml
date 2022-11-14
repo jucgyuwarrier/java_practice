@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<typeAliases>
+<typeAlias type="com.spring.member.vo.MemberVO" alias="memberVO" />
+</typeAliases>
+
+<!-- typeAlias 태그를 통해 mapper파일에서 긴 이름의 클래스를 별칭으로 사용가능하게함 
+	mybatis에서 데이터 전달에 사용될 memberVO의 빈을 생성
+-->
+
+</configuration>

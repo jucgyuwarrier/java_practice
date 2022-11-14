@@ -1,0 +1,13 @@
+1660883454974	Rename type 'Account'
+1660886348545	Move 'action-servlet.xml' to 'src'
+1660886351450	Move 'web.xml' to 'main'
+1660886362366	Move 'web.xml' to 'src'
+1660886393354	Move 'action-servlet.xml' to 'WEB-INF'
+1660886395647	Move 'web.xml' to 'WEB-INF'
+1660886411179	Move 'action-servlet.xml' to 'webapp'
+1660886413312	Move 'web.xml' to 'webapp'
+1660886425064	Move 'action-servlet.xml' to 'src'
+1660886426862	Move 'web.xml' to 'src'
+1660886438936	Move 'action-servlet.xml' to 'WEB-INF'
+1660886440827	Move 'web.xml' to 'WEB-INF'
+1660887104823	Delete element
